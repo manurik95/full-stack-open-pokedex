@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "start-prod": "node app.js",
-    "test": "jest",
+    "test": "jest --config jest.config.js",
     "eslint": "eslint ./src/**/*.js ./src/**/*.jsx ./test/*.jsx ./app.js ./*.js",
     "build": "webpack --mode production",
     "e2e": "playwright test",

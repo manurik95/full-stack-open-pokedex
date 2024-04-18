@@ -22,7 +22,7 @@ jobs:
       - name: Run Playwright tests
         run: npm run e2e
       - name: Wait for server to be ready
-        run: sleep 5
+        run: sleep 1
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
