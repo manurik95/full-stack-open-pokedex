@@ -13,9 +13,9 @@ const { defineConfig, devices } = require('@playwright/test')
 module.exports = defineConfig({
   webServer: {
     command: 'npm run start',
-    url: 'http://127.0.0.1:5000',
-    timeout: 120 * 1000,
-    reuseExistingServer: !process.env.CI
+    url: 'http://localhost:5000/',
+    timeout: 120 * 1000
+    //reuseExistingServer: !process.env.CI
   },
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
