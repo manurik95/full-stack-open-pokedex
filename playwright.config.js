@@ -14,8 +14,8 @@ module.exports = defineConfig({
   webServer: {
     command: 'npm run start',
     url: 'http://localhost:5000/',
-    timeout: 10 * 60 * 1000
-    //reuseExistingServer: !process.env.CI
+    timeout: 1 * 60 * 1000,
+    reuseExistingServer: !process.env.CI
   },
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -41,7 +41,11 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] }
+      use: {
+        ...devices['Desktop Chrome'],
+        headless: false,
+        slowMo: 50000
+      }
     },
 
     {
