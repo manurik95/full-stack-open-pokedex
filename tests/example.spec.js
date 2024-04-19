@@ -10,4 +10,11 @@ describe('Pokedex', () => {
       )
     ).toBeVisible()
   })
+
+  test('links lead to next site', async ({ page }) => {
+    await page.goto('/')
+    await page.click('text=ivysaur')
+    await expect(page.getByText('chlorophyll')).toBeVisible()
+    await expect(page.getByText('overgrow')).toBeVisible()
+  })
 })
