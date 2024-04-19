@@ -23,6 +23,8 @@ jobs:
         run: sleep 5
       - name: Run Playwright tests
         run: npm run e2e
+      - name: Check Error message
+        run: npx playwright show-report
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
