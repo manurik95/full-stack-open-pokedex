@@ -24,7 +24,7 @@ jobs:
       - name: Check server response
         run: curl http://localhost:5000
       - name: Print server logs
-        run: cat /path/to/server/logs.log
+        run: cat ./server.log
       - name: Run Playwright tests
         run: npm run e2e
       - name: Check Error message
@@ -35,3 +35,4 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+# Test
