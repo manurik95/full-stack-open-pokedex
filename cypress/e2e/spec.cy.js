@@ -7,7 +7,7 @@ describe('Pokedex', function () {
     )
   })
 
-  it('pokemon card can be clicked', function() {
+  it('pokemon card can be clicked', function () {
     cy.visit('http://localhost:5000')
     cy.contains('ivysaur').click()
     cy.contains('chlorophyll')
