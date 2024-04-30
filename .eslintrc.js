@@ -9,7 +9,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:jest/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'extends:plugin:cypress/recommended'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -18,7 +19,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['react', 'jest', 'prettier'],
+  plugins: ['react', 'jest', 'prettier', 'cypress'],
   rules: {
     'prettier/prettier': [
       'error',

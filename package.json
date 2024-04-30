@@ -6,10 +6,11 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "start-prod": "node app.js",
+    "cypress:open": "cypress open",
     "test": "jest --config jest.config.js",
     "eslint": "eslint ./src/**/*.js ./src/**/*.jsx ./test/*.jsx ./app.js ./*.js",
     "build": "webpack --mode production",
-    "e2e": "playwright test",
+    "e2e": "cypress run",
     "test:report": "playwright show-report"
   },
   "repository": {
@@ -37,8 +38,10 @@
     "babel-jest": "^29.7.0",
     "babel-loader": "^9.1.3",
     "css-loader": "^6.8.1",
-    "eslint": "^8.56.0",
+    "cypress": "^13.8.1",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^3.0.2",
     "eslint-plugin-jest": "^27.6.1",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.33.2",
